@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0 10% 3% 10%;
+}
+
+.add-photo {
+  float: right;
+  width: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+
+  background-color: rgba(61, 180, 109, 1);
+  color: white;
+  font-size: 1vw;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.search-container {
+  padding: 10px;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  box-shadow: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+  border-radius: 12px;
+  display: inline-block;
+  width: 25%;
+}
+
+#search {
+  width: 100%;
+  background-image: url("lupa.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  text-indent: 30px;
+  content: "text";
+  font-family: "Noto Sans", sans-serif;
+}
+
+#search:focus {
+  background-image: none;
+  text-indent: 5px;
+  outline: none;
+}
+
+main {
+  margin: 0 10% 0 10%;
+  columns: 3;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+  border-radius: 20px;
+}
+.image-container {
+  width: 100%;
+}
+
+label {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  width: 24%;
+  margin-left: 1%;
+  margin-top: -5%;
+  overflow: hidden;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.delete {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  background-color: transparent;
+  margin-left: 20%;
+  margin-top: 1%;
+  width: 5%;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  border-radius: 50px;
+  padding: 5px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    column-count: 2;
+  }
+
+  .delete {
+    margin-left: 29%;
+    margin-top: 2%;
+    width: 8%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    column-count: 1;
+  }
+
+  .delete {
+    margin-left: 60%;
+    margin-top: 3%;
+    width: 15%;
+  }
+}
+
+.image-container:hover img {
+  /* opacity: 30%; */
+  filter: brightness(50%);
+  position: relative;
+  z-index: 1;
+}
+.image-container:hover label {
+  visibility: visible;
+  display: block;
+  z-index: 2;
+}
+
+.image-container:hover .delete {
+  visibility: visible;
+  display: inline-block;
+  z-index: 2;
+}
+
+::placeholder {
+  font-family: "Noto Sans", sans-serif;
+}
