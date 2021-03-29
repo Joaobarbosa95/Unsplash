@@ -1,0 +1,38 @@
+		CSS 
+
+
+
+
+	Express Body parser
+
+- When submiting a form to server, express can´t handle bodies except if a body parser is set (like the built in express.json()). 
+Any other type, like the urlencoded submited with a form post method, needs a middleware body-parser (app.use(bodyParser.urlencoded)) 
+so it can handle the info received in the body. If not, the req.body will be empty.
+
+
+
+
+
+
+
+// details
+- indent form text input boxes
+- form placeholders 
+	My label
+	https://www.example.com/...
+
+- search bar position responsiveness
+- add photo button responsiveness
+- responsive form sizing
+
+
+
+// needs to be implemented
+- cancel button
+	- ObjectId in images dynamic insertion so we can target it 
+	- express delete route
+	- password confirmation
+
+- Search bar by label
+
+

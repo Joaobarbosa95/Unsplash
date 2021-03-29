@@ -67,7 +67,7 @@ img {
   width: 100%;
 }
 
-label {
+.image-label {
   display: none;
   visibility: hidden;
   position: absolute;
@@ -129,7 +129,7 @@ label {
   position: relative;
   z-index: 1;
 }
-.image-container:hover label {
+.image-container:hover .image-label {
   visibility: visible;
   display: block;
   z-index: 2;
@@ -143,4 +143,76 @@ label {
 
 ::placeholder {
   font-family: "Noto Sans", sans-serif;
+}
+
+/* Form */
+.form {
+  border: 1px solid grey;
+  position: fixed;
+  padding: 1%;
+  width: 30vw;
+  top: 25vh;
+  left: 36vw;
+  border-radius: 20px;
+  display: none;
+  visibility: none;
+  background-color: white;
+  z-index: 5;
+}
+
+.input-form {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  border: 1px solid #4f4f4f;
+  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+  border-radius: 4px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel,
+.submit {
+  display: inline-block;
+  min-width: 15%;
+  min-height: 30px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.submit {
+  background: #3db46d;
+  color: white;
+}
+
+.cancel {
+  margin-right: 3%;
+}
+
+.form-label,
+.photo-url {
+  display: block;
+  margin-bottom: -3%;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4f4f4f;
+}
+
+.inputs-form-container {
+  padding-top: 3%;
+}
+
+.add-new-photo {
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
 }
