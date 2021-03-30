@@ -10,6 +10,17 @@ Any other type, like the urlencoded submited with a form post method, needs a mi
 so it can handle the info received in the body. If not, the req.body will be empty.
 
 
+	
+	Event Listener inside Event Listeners
+
+- Event listeners will stack on top of one another, even it it is exactly the same event and function.
+- So adding event listeners inside event listeners is a bad idea because every time you trigger the initial
+event expecting to add events to the rest (form event to add events to submit or cancel buttons), will result 
+in every time you open the form, a new event will be added to the buttons stacking the effect n + 1 times you 
+triggered the form event.
+	Ex: form.addEventListener("click", () => btn.addEventListener("click", () => console.log("1")))
+		the second time you click form, it will add another event to btn, triggering 2 console.logs, 3 consoles 
+		on the third, ...
 
 
 
